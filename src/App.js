@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Navbar from './components/navbar.js';
+import Footer from './components/footer.js';
+import Page from './components/page.js';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App d-flex flex-column min-vh-100">
+    <Navbar /> {/* Navbar on top */}
+    <div className="flex-grow-1">
+      {/* Your main content */}
+      <Page/>
     </div>
+    <Footer /> {/* Sticky footer at the bottom */}
+  </div>
   );
 }
 
