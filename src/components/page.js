@@ -4,29 +4,33 @@ import React from 'react';
 
 const Page = () => {
   return (
+    <center>
     <div className="container mt-4">
       <div className="row mb-3">
-        <div className="col-md-6">
+      <h1>Take A Break Time</h1>
+      </div>
+      <div className='row mb-5'><h3>Select a time for Break</h3></div>
+      
+      <div className="row">
+        <div className="col-md-15">
+         <div className="mb-4 d-flex justify-content-center">
+            <button className="btn btn-primary mx-2 col-sm-1">5 Min</button>
+            <button className="btn btn-secondary mx-2 col-sm-1">10 Min</button>
+            <button className="btn btn-success mx-2 col-sm-1">15 Min</button>
+            <button className="btn btn-danger mx-2 col-sm-1">Custom</button>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-6">
           <div className="input-group">
-            <input type="text" className="form-control" placeholder="Search for..." />
+            <input type="text" className="form-control" placeholder="Search for website..." />
             <div className="input-group-append">
               <button className="btn btn-outline-secondary" type="button">Search</button>
             </div>
           </div>
         </div>
-      </div>
-      <div className="row">
-        <div className="col-md-6">
-          <textarea className="form-control mb-3" rows="5" placeholder="Enter text here"></textarea>
-          <div className="mb-3">
-            <button className="btn btn-primary mr-2">5 Min</button>
-            <button className="btn btn-secondary mr-2">10 Min</button>
-            <button className="btn btn-success mr-2">15 Min</button>
-            <button className="btn btn-danger ">Custom</button>
-          </div>
-        </div>
-      </div>
     </div>
+    </center>
   );
 }
 

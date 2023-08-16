@@ -22,6 +22,11 @@ const Navbar = () => {
                 <i className="bi bi-person"></i> Profile
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                <i className="bi bi-person"></i> Timer
+              </a>
+            </li>
           </ul>
         </div>
       </div>

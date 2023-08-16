@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width:10px; */
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .image-button {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .image-button img {
+  /* //  display:flex; */
+    width: 20%;
+    height: auto;
+  }
+  
+  .image-button:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+  }
+  
