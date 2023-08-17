@@ -1,8 +1,6 @@
 
 import Navbar from './components/navbar.js';
 import Footer from './components/footer.js';
-import Page from './components/page.js';
-import SocialIcons from './components/socialIcons.js';
 
 
 function App() {
@@ -25,8 +23,7 @@ function App() {
     <Navbar /> {/* Navbar on top */}
     <div className="flex-grow-1">
       {/* <RouterProvider router = {router}/> */}
-      <Page/>
-      <SocialIcons/>
+      
     </div>
     <Footer /> {/* Sticky footer at the bottom */}
   </div>

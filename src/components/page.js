@@ -3,6 +3,10 @@
 import React from 'react';
 
 const Page = () => {
+  const handleClick=(time)=>{
+    const iconsDiv = document.getElementById('icons');
+    iconsDiv.scrollIntoView({ behavior: 'smooth' });
+  } 
   return (
     <center>
     <div className="container mt-4">
@@ -14,7 +18,7 @@ const Page = () => {
       <div className="row">
         <div className="col-md-15">
          <div className="mb-4 d-flex justify-content-center">
-            <button className="btn btn-primary mx-2 col-sm-1">5 Min</button>
+            <button className="btn btn-primary mx-2 col-sm-1" onClick={()=>{handleClick(300)}}>5 Min</button>
             <button className="btn btn-secondary mx-2 col-sm-1">10 Min</button>
             <button className="btn btn-success mx-2 col-sm-1">15 Min</button>
             <button className="btn btn-danger mx-2 col-sm-1">Custom</button>
