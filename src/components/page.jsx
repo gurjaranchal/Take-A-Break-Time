@@ -1,9 +1,13 @@
 // src/components/Page.js
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const Page = () => {
+
+  const [closeTime,setCloseTime] = useState(0);
+
   const handleClick=(time)=>{
+    setCloseTime(time);
     const iconsDiv = document.getElementById('icons');
     iconsDiv.scrollIntoView({ behavior: 'smooth' });
   } 
@@ -18,9 +22,9 @@ const Page = () => {
       <div className="row">
         <div className="col-md-15">
          <div className="mb-4 d-flex justify-content-center">
-            <button className="btn btn-primary mx-2 col-sm-1" onClick={()=>{handleClick(300)}}>5 Min</button>
-            <button className="btn btn-secondary mx-2 col-sm-1">10 Min</button>
-            <button className="btn btn-success mx-2 col-sm-1">15 Min</button>
+            <button className={`btn btn-primary mx-2 col-sm-1 ${closeTime==5*60 ? 'border border-dark border-1 rounded-pill' : ''}`} onClick={()=>{handleClick(300)}}>5 Min</button>
+            <button className={`btn btn-secondary mx-2 col-sm-1 ${closeTime==10*60 ? 'border border-dark border-1 rounded-pill' : ''}`} onClick={()=>{handleClick(600)}}>10 Min</button>
+            <button className={`btn btn-success mx-2 col-sm-1 ${closeTime==15*60 ? 'border border-dark border-1 rounded-pill' : ''}`} onClick={()=>{handleClick(15*60)}}>15 Min</button>
             <button className="btn btn-danger mx-2 col-sm-1">Custom</button>
           </div>
         </div>
