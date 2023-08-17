@@ -1,6 +1,6 @@
 
-import Navbar from './components/navbar.js';
-import Footer from './components/footer.js';
+import Navbar from './components/navbar.jsx';
+import Footer from './components/footer.jsx';
 
 
 function App() {
