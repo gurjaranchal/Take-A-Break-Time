@@ -28,6 +28,7 @@ const Stopwatch = () => {
     setRunning(false);
   };
   const formattedTime = new Date(time * 1000).toISOString().substr(11, 8)
+  
   return (
     <center>
     <div className="container mt-5 pt-5">
@@ -38,6 +39,7 @@ const Stopwatch = () => {
         {running ? 'Pause' : 'Start'}</button>
             <button className="btn btn-secondary mx-5 col-sm-btn btn-secondary mx-3"onClick={resetTimer}>Reset</button>
       </div>
+
     </div>
     </center>
   );
