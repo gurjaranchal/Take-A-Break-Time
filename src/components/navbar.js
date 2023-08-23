@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Bootstrap Icons CSS
 import Stopwatch from './stopwatch';
 import Page from './page';
 import SocialIcons from './socialIcons';
+import Custom from './custom';
 
 function Navbar(){
   const [activeTab, setActiveTab] = useState('home');
@@ -28,6 +29,13 @@ function Navbar(){
               </button>
             </li>
             <li className="nav-item">
+              <button className={`nav-link ${activeTab === 'custom' ? 'active' : ''}`}
+            onClick={() => handleTabClick('custom')}
+           >
+                <i className="bi bi-dpad"></i> Custom
+              </button>
+            </li>
+            <li className="nav-item">
               <button className={`nav-link ${activeTab === 'profile' ? 'active' : ''}`}
             onClick={() => handleTabClick('profile')}
            >
@@ -38,9 +46,10 @@ function Navbar(){
               <button className={`nav-link ${activeTab === 'timer' ? 'active' : ''}`}
             onClick={() => handleTabClick('timer')}
           >
-                <i className="bi bi-person"></i> Timer
+                <i className="bi bi-clock"></i> Timer
               </button>
             </li>
+
           </ul>
         </div>
       </div>
@@ -49,6 +58,9 @@ function Navbar(){
         <div className={`tab-pane ${activeTab === 'home' ? 'active' : ''}`} id="home">
         <Page/>
       <SocialIcons/>
+        </div>
+        <div className={`tab-pane ${activeTab === 'custom' ? 'active' : ''}`} id="custom">
+          <Custom/>
         </div>
         <div className={`tab-pane ${activeTab === 'profile' ? 'active' : ''}`} id="profile">
           profile

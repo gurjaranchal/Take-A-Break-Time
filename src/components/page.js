@@ -2,11 +2,16 @@
 
 import React from 'react';
 
+
+
 const Page = () => {
+ 
   const handleClick=(time)=>{
     const iconsDiv = document.getElementById('icons');
     iconsDiv.scrollIntoView({ behavior: 'smooth' });
   } 
+
+
   return (
     <center>
     <div className="container mt-4">
@@ -33,7 +38,10 @@ const Page = () => {
             </div>
           </div>
         </div>
+
+       
     </div>
+    
     </center>
   );
 }

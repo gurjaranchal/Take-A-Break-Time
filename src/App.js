@@ -20,10 +20,14 @@ function App() {
 
   return (
     <div className="App d-flex flex-column min-vh-100">
+
+   
+
+      {/* {} */}
     <Navbar /> {/* Navbar on top */}
     <div className="flex-grow-1">
       {/* <RouterProvider router = {router}/> */}
-      
+     
     </div>
     <Footer /> {/* Sticky footer at the bottom */}
   </div>
