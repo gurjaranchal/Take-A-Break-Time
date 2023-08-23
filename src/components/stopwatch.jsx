@@ -31,16 +31,15 @@ const Stopwatch = () => {
   
   return (
     <center>
-    <div className="container mt-5 pt-5">
-      <h1>Stopwatch</h1>
-      <div className="clock mt-5 "><h2>{formattedTime}</h2></div>
-      <div className="btn-group mt-4 justify-content-center pt-5">
-            <button className={`btn btn-${running ? 'danger' : 'success'} mx-3`}onClick={toggleRunning}>
-        {running ? 'Pause' : 'Start'}</button>
-            <button className="btn btn-secondary mx-5 col-sm-btn btn-secondary mx-3"onClick={resetTimer}>Reset</button>
+      <div className="container mt-5 pt-5">
+        <h1>Stopwatch</h1>
+        <div className="clock mt-5 "><h2>{formattedTime}</h2></div>
+        <div className="btn-group mt-4 justify-content-center pt-5">
+          <button className={`btn btn-${running ? 'danger' : 'success'} mx-3`} onClick={toggleRunning}>
+            {running ? 'Pause' : 'Start'}</button>
+          <button className="btn btn-secondary mx-5 col-sm-btn btn-secondary mx-3" onClick={resetTimer}>Reset</button>
+        </div>
       </div>
-
-    </div>
     </center>
   );
 };
